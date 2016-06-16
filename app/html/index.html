@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <title>markdown</title>
+    <link rel="stylesheet" href="../static/css/editormd.css"/>
+    <link rel="stylesheet" href="../static/css/loaders.css"/>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            background-color: #64B5F6;
+            overflow: hidden;
+        }
+
+        #loader {
+            box-sizing: border-box;
+            display: flex;
+            flex: 0 1 auto;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 25%;
+            width: 100%;
+            background-color: #64B5F6;
+            height: 800px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #editor{
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div id="loader">
+    <div class="loader-inner ball-pulse">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div id="editor">
+    <div id="markdown" style="margin: 0"></div>
+</div>
+
+<script>
+
+    var index = require('../script/index');
+
+    index.init(window);
+</script>
+</body>
+</html>
